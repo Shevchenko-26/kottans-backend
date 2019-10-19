@@ -44,3 +44,21 @@ summary
 - [x] [Oh shit, git!](http://ohshitgit.com/)
 - [ ] [Flight rules for git](https://github.com/k88hudson/git-flight-rules)
 - [ ] [GitHub Learning Lab](https://lab.github.com/courses)
+## Go basics 1
+
+####Theory
+1. Passed "Tour of Go"
+2. Reported that EXL skills did not work. 
+- INTRODUCTION, ESSENTIALS OF GO, CORE DATATYPES, BEYOND THE BASICS, ADVANCED DATATYPES
+3. Finished articles
+####Practice
+Please note, roman digits task uses numbers.go file, since I did not want to clutter the main.go
+
+[roman digits](roman-digits/main.go)
+
+- Extra materials
+
+- [ ] [FreeCodeCamp Golang Course](https://www.youtube.com/playlist?list=PLJbE2Yu2zumCe9cO3SIyragJ8pLmVv0z9)
+- [x] [Go By Example](https://gobyexample.com/)
+- [x] [An Introduction to Programming in Go](https://www.golang-book.com/books/intro);
+- [ ] [50 оттенков Go](https://habr.com/ru/company/mailru/blog/314804/)
