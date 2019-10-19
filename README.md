@@ -46,12 +46,12 @@ summary
 - [ ] [GitHub Learning Lab](https://lab.github.com/courses)
 ## Go basics 1
 
-####Theory
+#### Theory
 1. Passed "Tour of Go"
 2. Reported that EXL skills did not work. 
 - INTRODUCTION, ESSENTIALS OF GO, CORE DATATYPES, BEYOND THE BASICS, ADVANCED DATATYPES
 3. Finished articles
-####Practice
+#### Practice
 Please note, roman digits task uses numbers.go file, since I did not want to clutter the main.go
 
 [roman digits](roman-digits/main.go)
@@ -62,3 +62,16 @@ Please note, roman digits task uses numbers.go file, since I did not want to clu
 - [x] [Go By Example](https://gobyexample.com/)
 - [x] [An Introduction to Programming in Go](https://www.golang-book.com/books/intro);
 - [ ] [50 оттенков Go](https://habr.com/ru/company/mailru/blog/314804/)
+
+## Memory Management
+#### Answers
+- What's going to happen if program reaches maximum limit of stack ?
+    
+    we have a stack overflow and the program receives a Segmentation Fault.
+
+- What's going to happen if program requests a big (more then 128KB) memory allocation on heap ?
+
+    the heap is enlarged via the brk() system call (implementation) to make room for the requested block
+- What's the difference between Text and Data memory segments ?
+    Text - read/execute - has code that was run
+    Data - read/write - has initialized variables
