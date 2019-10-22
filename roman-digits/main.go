@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"log"
 	"os"
@@ -12,18 +13,25 @@ var digitLength = 7
 var digitWidth = 5
 
 func main() {
-	if len(os.Args) != 2 {
+	if len(os.Args) != 2 && len(os.Args) != 4 {
 		log.Println("Need only one input number")
 		log.Println(os.Args)
 		os.Exit(1)
 	}
-	number := os.Args[1]
+	symbolFlag := flag.Bool("symbol", false, "set custom symbol for the art")
+	flag.Parse()
+	var symbol, number string
+	if *symbolFlag {
+
+		number = os.Args[3]
+		symbol = os.Args[2]
+	}
 	if _, err := strconv.ParseUint(number, 10, 64); err != nil {
 		log.Println("Input argument is integer non-convertible: ", err.Error())
 		os.Exit(1)
 	}
 
-	digs := prepareDigits()
+	digs := prepareDigits(symbol)
 
 	sb := strings.Builder{}
 	for i := 0; i < 7; i++ {
@@ -40,11 +48,15 @@ func main() {
 	fmt.Printf("%s\n%s\n%s", asteriskBorder, sb.String(), asteriskBorder)
 }
 
-func prepareDigits() map[int][]string {
+func prepareDigits(symbol string) map[int][]string {
 	artNumbers := strings.Split(digits, "\n\n")
 	numbers := make(map[int][]string)
 	numberHeight := 0
-	for _, digit := range artNumbers {
+	for i, digit := range artNumbers {
+		if symbol != "" {
+			digit = strings.ReplaceAll(digit, strconv.Itoa(i), symbol)
+		}
+
 		for _, digitString := range strings.Split(digit, "\n") {
 			if digitString == "" {
 				continue

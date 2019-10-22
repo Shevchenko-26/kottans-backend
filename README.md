@@ -47,9 +47,8 @@ summary
 ## Go basics 1
 
 #### Theory
-1. Passed "Tour of Go"
+1. Passed "Tour of Go", Effective go, Golangbootcamp
 2. Reported that EXL skills did not work. 
-- INTRODUCTION, ESSENTIALS OF GO, CORE DATATYPES, BEYOND THE BASICS, ADVANCED DATATYPES
 3. Finished articles
 #### Practice
 Please note, roman digits task uses numbers.go file, since I did not want to clutter the main.go
@@ -75,3 +74,32 @@ Please note, roman digits task uses numbers.go file, since I did not want to clu
 - What's the difference between Text and Data memory segments ?
     Text - read/execute - has code that was run
     Data - read/write - has initialized variables
+    
+    An extract from the output
+```
+7f67a4850000-7f67a4854000 r--p 00027000 08:11 134921                     /usr/lib64/libtinfo.so.6.0                                                                            
+7f67a4854000-7f67a4855000 rw-p 0002b000 08:11 134921                     /usr/lib64/libtinfo.so.6.0                                                                            
+7f67a4855000-7f67a487c000 r-xp 00000000 08:11 134641                     /usr/lib64/ld-2.25.so                                                                                 
+7f67a4a27000-7f67a4a65000 r-xp 00000000 08:11 134826                     /usr/lib64/libnss_systemd.so.2                                                                        
+7f67a4a65000-7f67a4a68000 r--p 0003d000 08:11 134826                     /usr/lib64/libnss_systemd.so.2                                                                        
+7f67a4a68000-7f67a4a69000 rw-p 00040000 08:11 134826                     /usr/lib64/libnss_systemd.so.2                                                                        
+7f67a4a69000-7f67a4a6c000 rw-p 00000000 00:00 0                                                                                                                                
+7f67a4a79000-7f67a4a7b000 rw-p 00000000 00:00 0                                                                                                                                
+7f67a4a7b000-7f67a4a7c000 r--p 00026000 08:11 134641                     /usr/lib64/ld-2.25.so                                                                                 
+7f67a4a7c000-7f67a4a7e000 rw-p 00027000 08:11 134641                     /usr/lib64/ld-2.25.so                                                                                 
+7f67a4a7e000-7f67a4b83000 r-xp 00000000 08:11 131601                     /usr/bin/bash                                                                                         
+7f67a4d82000-7f67a4d86000 r--p 00104000 08:11 131601                     /usr/bin/bash                                                                                         
+7f67a4d86000-7f67a4d8f000 rw-p 00108000 08:11 131601                     /usr/bin/bash
+7f67a4054000-7f67a421b000 r-xp 00000000 08:11 134666                     /usr/lib64/libc-2.25.so                                                                                           
+7f67a4d8f000-7f67a4d99000 rw-p 00000000 00:00 0                                                                                                                                
+7f67a58a6000-7f67a58e8000 rw-p 00000000 00:00 0                          [heap]                                                                                                
+7ffe34c43000-7ffe34c64000 rw-p 00000000 00:00 0                          [stack]                                                                                               
+7ffe34cbb000-7ffe34cbd000 r-xp 00000000 00:00 0                          [vdso]                                                                                                
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+```
+    Heap 7f67a58a6000-7f67a58e8000                                                                                                 
+    Stack 7ffe34c43000-7ffe34c64000 
+    MMS 7f67a4054000-7f67a421b000
+- Extra materials   
+- [ ] [Debugging: Simple Memory Leaks in Go](https://medium.com/dm03514-tech-blog/sre-debugging-simple-memory-leaks-in-go-e0a9e6d63d4d)
+- [ ] [Avoiding Memory Leak in Golang API](https://hackernoon.com/avoiding-memory-leak-in-golang-api-1843ef45fca8)
