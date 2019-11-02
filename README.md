@@ -38,7 +38,7 @@
 ## Git Collaboration
 I found latest section on rebasing, cherry-picks and other useful as never really used those commands, mainly because did not need to
 summary
-![alt text](task_git_collaboration/summary.jpg)
+![task_git_collaboration](task_git_collaboration/summary.jpg)
 -  Extra materials
 - [ ] [An Introduction to Git and GitHub by Brian Yu (CS50 course), video, ~40 min.](https://youtu.be/MJUJ4wbFm_A)
 - [x] [Oh shit, git!](http://ohshitgit.com/)
@@ -100,6 +100,34 @@ ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsysca
     Heap 7f67a58a6000-7f67a58e8000                                                                                                 
     Stack 7ffe34c43000-7ffe34c64000 
     MMS 7f67a4054000-7f67a421b000
+    
+Materials were not easy but some background from university helped a lot.
+Besides, commands did not really work on my mac, but since, hey, Ubuntu is running on it as well, I found my way around these obstacles.
 - Extra materials   
 - [ ] [Debugging: Simple Memory Leaks in Go](https://medium.com/dm03514-tech-blog/sre-debugging-simple-memory-leaks-in-go-e0a9e6d63d4d)
 - [ ] [Avoiding Memory Leak in Golang API](https://hackernoon.com/avoiding-memory-leak-in-golang-api-1843ef45fca8)
+- [ ] [Как устроен garbage collector в Go 1.9](https://www.youtube.com/watch?v=CX4GSErFenI)
+
+## TCP. UDP. Network
+1. [Internet 101](https://www.khanacademy.org/computing/computer-science/internet-intro)
+
+    Easy course with just little basics
+1. [Networking for Web Developers](https://www.udacity.com/course/networking-for-web-developers--ud256)
+
+    Had some interesting info in parts 4 and 5.
+    Liked reading how sending packets and etc work(handshakes, flags, teardowns and so on)
+    
+    Also, the way traceroute works - sending suicide packets to get the route seems like a genius idea for the problem 
+1. [How DNS Works](https://howdns.works/)
+
+    Nice comic, enjoyed myself and sent to a friend
+    ![Internet101](task_networks/Internet101.png)
+    
+    ![Udacity networks](task_networks/Udacity networks.png)
+
+## Extra materials
+
+- [ ] [Introduction to TCP/IP. Course](https://www.coursera.org/learn/tcpip)
+- [ ] [What happens when you type google.com into your browser and press enter?](https://github.com/alex/what-happens-when)
+- [ ] [Big list of TCP/UDP ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+- [x] [Package 'net' Golang docs](https://golang.org/pkg/net/)
