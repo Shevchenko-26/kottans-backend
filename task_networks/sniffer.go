@@ -27,7 +27,7 @@ func main() {
 		if err != nil {
 			log.Fatal("Starting port was specified incorrectly. Aborting...")
 		}
-		end, err = strconv.Atoi(portsNums[0])
+		end, err = strconv.Atoi(portsNums[1])
 		if err != nil {
 			log.Fatal("Second port was specified incorrectly. Aborting...")
 		}
@@ -41,8 +41,6 @@ func main() {
 		if err == nil {
 			fmt.Print(".")
 			ports = append(ports, i)
-		} else {
-			//fmt.Println(err.Error())
 		}
 	}
 	if len(ports) != 0 {
