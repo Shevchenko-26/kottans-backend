@@ -123,7 +123,7 @@ Besides, commands did not really work on my mac, but since, hey, Ubuntu is runni
     Nice comic, enjoyed myself and sent to a friend
     ![Internet101](task_networks/Internet101.png)
     
-    ![Udacity networks](task_networks/Udacity networks.png)
+    ![Udacity networks](task_networks/UdacityNetworks.png)
 
 ## Extra materials
 
