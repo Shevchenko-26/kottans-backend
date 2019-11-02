@@ -13,6 +13,7 @@ var digitLength = 7
 var digitWidth = 5
 
 func main() {
+	fmt.Println(os.Args)
 	if len(os.Args) != 2 && len(os.Args) != 4 {
 		log.Println("Need only one input number")
 		log.Println(os.Args)
@@ -49,22 +50,20 @@ func main() {
 }
 
 func prepareDigits(symbol string) map[int][]string {
-	artNumbers := strings.Split(digits, "\n\n")
+
+	artNumbers := strings.Trim(digits, "\n")
+
 	numbers := make(map[int][]string)
-	numberHeight := 0
-	for i, digit := range artNumbers {
-		if symbol != "" {
-			digit = strings.ReplaceAll(digit, strconv.Itoa(i), symbol)
+
+	for i, digit := range strings.Split(artNumbers, "\n\n") {
+		for _, digitString := range strings.Split(digit, "\n") {
+
+			numbers[i] = append(numbers[i], fmt.Sprintf("%-5s", digitString))
+
 		}
 
-		for _, digitString := range strings.Split(digit, "\n") {
-			if digitString == "" {
-				continue
-			}
-			digitString = fmt.Sprintf("%-5s", digitString)
-			numbers[numberHeight/digitLength] = append(numbers[numberHeight/digitLength], digitString)
-			numberHeight++
-		}
 	}
+
 	return numbers
+
 }
